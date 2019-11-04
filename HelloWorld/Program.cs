@@ -8,40 +8,34 @@ namespace HelloWorld
         {
             //Experiments();
 
-            // If statements are the same
-            Console.WriteLine("Please enter your age:");
-            int age = 18; //Int32.Parse(Console.ReadLine());
-            Console.WriteLine("Please enter your password:");
-            string password = "password";
-            if (age >= 18 && password == "password")
-                {
-                Console.WriteLine("Access Granted");
-            }
-            else
+            int[] values = { 1, 6345, 234, 34, 756, 21 };
+            Array.Sort(values);
+            for (int x = 0; x < values.Length; x++)
             {
-                Console.WriteLine("Security Lockdown");
+                Console.WriteLine(values[x]);
             }
-            // Switch Statement
-            string name = "Steve";
-            switch(name)
+            Array.Reverse(values);
+            for (int x = 0; x < values.Length; x++)
             {
-                case "Steve":
-                    Console.WriteLine($"Sup {name}");
-                    break;
-                case "Geoff":
-                    Console.WriteLine("Howdy");
-                    break;
-                default:
-                    Console.WriteLine("Hi");
-                    break;
+                Console.WriteLine(values[x]);
             }
-            // Forgot what this is called....
-            bool correct = true;
-            int points = correct ? 10 : 0;
-            Console.WriteLine(points);
 
-            // Single line
-            if (name == "Steve") Console.WriteLine("This is a single line if statement!");
+
+            // Triangularism
+            int i = 9;
+            while (i>=0)
+            {
+                int k = i;
+                while(k >=0)
+                {
+                    Console.Write(k + " ");
+                    k--;
+                }
+                Console.WriteLine();
+                i--;
+            }
+
+            
             
 
         }
@@ -81,6 +75,41 @@ namespace HelloWorld
                 Console.WriteLine("Yeeewww");
 
             }
+
+            // If statements are the same
+            Console.WriteLine("Please enter your age:");
+            int age = 18; //Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter your password:");
+            string password = "password";
+            if (age >= 18 && password == "password")
+            {
+                Console.WriteLine("Access Granted");
+            }
+            else
+            {
+                Console.WriteLine("Security Lockdown");
+            }
+            // Switch Statement
+            string name = "Steve";
+            switch (name)
+            {
+                case "Steve":
+                    Console.WriteLine($"Sup {name}");
+                    break;
+                case "Geoff":
+                    Console.WriteLine("Howdy");
+                    break;
+                default:
+                    Console.WriteLine("Hi");
+                    break;
+            }
+            // Forgot what this is called....
+            bool correct = true;
+            int points = correct ? 10 : 0;
+            Console.WriteLine(points);
+
+            // Single line
+            if (name == "Steve") Console.WriteLine("This is a single line if statement!");
         }
     }
 }
