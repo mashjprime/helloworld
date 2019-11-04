@@ -8,15 +8,42 @@ namespace HelloWorld
         {
             //Experiments();
 
-            Person person2 = new Person();
-            person2.FirstName = "Bob";
-            person2.LastName = "The man";
-
-            if(person2.FullName == "Bob Jungalist The man")
-            {
-                Console.WriteLine("Yeeewww");
-
+            // If statements are the same
+            Console.WriteLine("Please enter your age:");
+            int age = 18; //Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter your password:");
+            string password = "password";
+            if (age >= 18 && password == "password")
+                {
+                Console.WriteLine("Access Granted");
             }
+            else
+            {
+                Console.WriteLine("Security Lockdown");
+            }
+            // Switch Statement
+            string name = "Steve";
+            switch(name)
+            {
+                case "Steve":
+                    Console.WriteLine($"Sup {name}");
+                    break;
+                case "Geoff":
+                    Console.WriteLine("Howdy");
+                    break;
+                default:
+                    Console.WriteLine("Hi");
+                    break;
+            }
+            // Forgot what this is called....
+            bool correct = true;
+            int points = correct ? 10 : 0;
+            Console.WriteLine(points);
+
+            // Single line
+            if (name == "Steve") Console.WriteLine("This is a single line if statement!");
+            
+
         }
 
         static void Experiments()
@@ -44,6 +71,16 @@ namespace HelloWorld
 
             Console.WriteLine("\n" + person.GetFullName());
             Console.WriteLine(person.FullName);
+
+            Person person2 = new Person();
+            person2.FirstName = "Bob";
+            person2.LastName = "The man";
+
+            if (person2.FullName == "Bob Jungalist The man")
+            {
+                Console.WriteLine("Yeeewww");
+
+            }
         }
     }
 }
