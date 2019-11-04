@@ -23,6 +23,15 @@ namespace HelloWorld
                 j++;
             }
 
+            Person person = new Person();
+            person.FirstName = "Mash";
+            person.LastName = "Prime";
+
+            Console.WriteLine("\n" + person.GetFullName());
+            Console.WriteLine(person.FullName);
+
+
+
         }
     }
 }
