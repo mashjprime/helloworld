@@ -6,6 +6,21 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+            //Experiments();
+
+            Person person2 = new Person();
+            person2.FirstName = "Bob";
+            person2.LastName = "The man";
+
+            if(person2.FullName == "Bob Jungalist The man")
+            {
+                Console.WriteLine("Yeeewww");
+
+            }
+        }
+
+        static void Experiments()
+        {
             Console.WriteLine("Hello World!");
             int[] a = { -5, 2, 123, 56, (int)3.5 };
             for (int i = 0; i < a.Length; i++)
@@ -17,9 +32,9 @@ namespace HelloWorld
             String splitMe = "These,values,are,comma,separated";
             string[] intoArray = splitMe.Split(',');
             int j = 0;
-            while(j<intoArray.Length)
+            while (j < intoArray.Length)
             {
-                Console.Write(intoArray[j]+ " ");
+                Console.Write(intoArray[j] + " ");
                 j++;
             }
 
@@ -29,9 +44,6 @@ namespace HelloWorld
 
             Console.WriteLine("\n" + person.GetFullName());
             Console.WriteLine(person.FullName);
-
-
-
         }
     }
 }
