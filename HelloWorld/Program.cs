@@ -7,10 +7,13 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            Console.WriteLine("This is my first C# application ;)");
-            Console.WriteLine("Please enter your name: ");
-            string name = Console.ReadLine();
-            Console.WriteLine($"You are awesome {name}");
+            int[] a = { -5, 2, 123, 56, 3 };
+            for (int i = 0; i < a.Length; i++)
+            {
+                Console.WriteLine(a[i]);
+            }
+
+
         }
     }
 }
