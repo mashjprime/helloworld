@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace HelloWorld
 {
@@ -7,7 +8,17 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             //Experiments();
+            //shapes();
 
+
+            List<int> grades = new List<int>();
+            grades.Add(5);
+            grades.Add(10);
+
+        }
+
+        static void shapes()
+        {
             int[] values = { 1, 6345, 234, 34, 756, 21 };
             Array.Sort(values);
             for (int x = 0; x < values.Length; x++)
@@ -23,10 +34,10 @@ namespace HelloWorld
 
             // Triangularism
             int i = 9;
-            while (i>=0)
+            while (i >= 0)
             {
                 int k = i;
-                while(k >=0)
+                while (k >= 0)
                 {
                     Console.Write(k + " ");
                     k--;
@@ -34,10 +45,6 @@ namespace HelloWorld
                 Console.WriteLine();
                 i--;
             }
-
-            
-            
-
         }
 
         static void Experiments()
