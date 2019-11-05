@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace HelloWorld
 {
@@ -8,14 +10,68 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             //Experiments();
-            //shapes();
+            //shapes();     
+            textFiles();    
+                            
+                            
+        }                   
 
+        static void textFiles()
+        {
+            string filePath = @"D:\code\c-sharp\HelloWorld\HelloWorld\data.txt";
+            
+            List<Person> people = new List<Person>();
+            List<string> lines = File.ReadAllLines(filePath).ToList();
 
-            List<int> grades = new List<int>();
-            grades.Add(5);
-            grades.Add(10);
+            foreach (string line in lines)
+            {
+                string[] entries = line.Split(',');
 
+                Person newPerson = new Person();
+
+                newPerson.FirstName = entries[0];
+                newPerson.MiddleName = entries[1];
+                newPerson.LastName = entries[2];
+                newPerson.Age = entries[3];
+                newPerson.MoreInfo = entries[4];
+
+                people.Add(newPerson);
+            }
+
+            foreach (var person in people)
+            {
+                Console.WriteLine($" {person.FirstName} {person.MiddleName} {person.LastName}: {person.Age}");
+                Console.WriteLine("\t^" + person.MoreInfo);
+            }
+
+            people.Add(new Person { FirstName = "Fish", MiddleName = "in", LastName = "tank", Age = "2", MoreInfo = "So purdy" });
+
+            List<string> output = new List<string>();
+            foreach (var person in people)
+            {
+                output.Add($"{person.FirstName},{person.MiddleName},{person.LastName},{person.Age},{person.MoreInfo}");
+            }
+            Console.WriteLine("Writing to file...");
+
+            File.WriteAllLines(filePath, output);
+
+            Console.WriteLine("Complete");
+
+                                          
+            /*
+            File.ReadAllLines(filePath);
+            List<string> lines = File.ReadAllLines(filePath).ToList(); // Read from text file
+
+            foreach (string line in lines)
+            {
+                Console.WriteLine(line);
+            }
+
+            lines.Add("Boss Tacular Prime, 7, Boss ahhaaa");
+
+            File.WriteAllLines(filePath, lines); // Write to a text file*/
         }
+
 
         static void shapes()
         {
@@ -49,6 +105,12 @@ namespace HelloWorld
 
         static void Experiments()
         {
+            // Lists
+            List<int> grades = new List<int>();
+            grades.Add(5);
+            grades.Add(10);
+
+
             Console.WriteLine("Hello World!");
             int[] a = { -5, 2, 123, 56, (int)3.5 };
             for (int i = 0; i < a.Length; i++)

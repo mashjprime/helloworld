@@ -7,8 +7,11 @@ namespace HelloWorld
     class Person
     {
         public string FirstName { get; set; }
+        public string MiddleName { get; set; }
         public string LastName { get; set; }
-        string middleName = "Jungalist";
+        public string Age { get; set; }
+        public string MoreInfo { get; set; }
+        
 
         public string GetFullName()
         {
@@ -18,7 +21,7 @@ namespace HelloWorld
         {
             get
             {
-                return FirstName + " " + middleName + " " + LastName;
+                return FirstName + " " + MiddleName + " " + LastName;
             }
         }
     }
